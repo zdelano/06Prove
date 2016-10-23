@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,4 +11,51 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.zachary.a06provemulti_threadedprogramming.MainActivity">
 
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:id="@+id/progressBar2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/progressBar2"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/list_view"
+        android:layout_above="@+id/button_create"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false" />
+
+    <Button
+        android:text="Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_clear"
+        android:onClick="clearAdapter"
+        android:layout_alignBaseline="@+id/button_load"
+        android:layout_alignBottom="@+id/button_load"
+        android:layout_toEndOf="@+id/button_load" />
+
+    <Button
+        android:text="Load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_load"
+        android:onClick="loadFile"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_create"
+        android:onClick="writeFile"
+        android:layout_marginStart="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
