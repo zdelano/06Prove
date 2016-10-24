@@ -74,7 +74,7 @@ public class LoadFile extends AsyncTask<File, Integer, List> {
 
     /**
      * Get the progressbar progress
-     * @return
+     * @return progressBar.getProgress()
      */
     int getProgressBarProgress() { return progressBar.getProgress(); }
 
